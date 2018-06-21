@@ -1,0 +1,17 @@
+.meu-bloquinho-feliz {
+   /* posicionamento */
+   position: relative;
+   top: 10px;
+   left: 10px;
+   /* dimensões */
+   display: block;
+   width: 100px;
+   height: 50px;
+   /* embelezamento */
+   background: green;
+   color: yellow;
+   /* outros */
+   border-radius: 10px;
+   box-shadow: 1px 1px 1px black;
+   transition: all 200ms ease-in-out;
+ }
