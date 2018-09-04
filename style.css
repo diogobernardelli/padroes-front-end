@@ -1,0 +1,124 @@
+* {
+  transition: all 200ms ease-in-out;
+}
+
+a {
+  color: #2cb5e8;
+}
+
+a:hover {
+  color: #0fb8ad;
+}
+
+main {
+  padding: 0 50px 50px;
+}
+
+header {
+  width: 100%;
+  padding: 50px 100px;
+  font-size: 50px;
+  font-weight: 60px;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  margin: 80px 0 20px;
+  border-left: 4px solid #0fb8ad;
+  padding: 0 0 0 20px;
+}
+
+h5 {
+  text-align: center;
+  margin: 15px 0 0;
+}
+
+.mind-blowing {
+  width: 440px;
+  margin: 0 auto;
+}
+
+.mind-blowing img {
+  margin: 45px 0 0;
+  width: 100%;
+}
+
+.row {
+  display: block;
+}
+
+.row.space {
+  margin: 20px 0;
+}
+
+p {
+  display: block;
+  margin: 5px 0;
+}
+
+strong + p {
+  margin: 5px 0 0 0;
+}
+
+p:last-child {
+  margin-bottom: 25px;
+}
+
+xmp {
+  background: rgba(0,0,0,.05);
+}
+
+.link-as-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #2cb5e8;
+  width: auto;
+  color: white;
+  margin: 0 0 10px;
+}
+.link-as-button:hover {
+  color: white;
+  text-decoration: none;
+  background: #1fc8db;
+}
+
+.button-as-link {
+  border: 0;
+  background: none;
+  color: #2cb5e8;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button-as-link:hover {
+  color: #1fc8db;
+}
+
+.tag {
+  color: #1fc8db;
+}
+
+img {
+  margin-top: 20px;
+}
+
+.action1, .action2 {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #fff;
+  font-weight: bold;
+  margin: 0 20px 0 0;
+}
+
+.action1:hover, .action2:hover {
+  background: #1fc8db;
+  color: #fff;
+}
+
+.action2 {
+  transition: all 800ms ease-in-out;
+}

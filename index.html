@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <title>Padrões Front-end - Bullshit ou necessário?</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>Padrões Front-end - Bullshit ou necessário?</header>
+
+  <main>
+    <div class="row">
+      <h2>HTML</h2>
+    </div>
+
+    <div class="row">
+      <strong>- Link com cara de button (e vice-versa)</strong>
+      <p>
+        <a href="javascript" class="link-as-button">Eu sou um link, bota fé?</a><br />
+        <button type="submit" class="button-as-link">Eu sou um botão.. JURO!</button>
+        <xmp>
+          <a href="javascript" class="link-as-button">Eu sou um link, bota fé?</a>
+
+          <button type="submit" class="button-as-link">Eu sou um botão.. JURO!</button>
+        </xmp>
+      </p>
+    </div>
+
+    <div class="row">
+      <strong>- Button com redirecionamento</strong>
+      <p>
+        <xmp>
+          <input type="submit" value="Go to my link location" onclick="window.location='/my/link/location';" />
+        </xmp>
+      </p>
+    </div>
+
+    <div class="row">
+      <strong>- HTML5 (header, nav, footer, address, section, etc)</strong>
+      <p>HTML é novinho (chegou em 2013) e traz uma série de tags extremamente úteis tanto para os desenvolvedores quanto para a semântica da página e os motores de busca (Google, Yahoo (?), Cadê (??), etc).</p>
+      <p>
+        Alguns exemplos de tags HTML5 úteis:<br /><br />
+      </p>
+      <p>
+        <strong class="tag">&lt;header&gt;</strong>  Define um cabeçalho para o documento ou uma seção<br />
+        <strong class="tag">&lt;nav&gt;</strong>  Define links de navegação no documento<br />
+        <strong class="tag">&lt;footer&gt;</strong>  Define o rodapé do documento ou seção<br />
+        <strong class="tag">&lt;address&gt;</strong>  Normalmente utilizado no rodapé para identificar o endereço e dados de contato<br />
+        <strong class="tag">&lt;section&gt;</strong>  Define uma seção no documento<br />
+        <strong class="tag">&lt;main&gt;</strong>  Define o conteúdo principal de um documento<br />
+      </p>
+    </div>
+
+    <div class="row">
+      <strong>- Vários h1`s ou h2`s na mesma tela</strong>
+      <p>
+        Ainda que muitos princípios e altorimos dos buscadores tenham mudado para o rankeamento das páginas, uma boa semântica e o bom uso das tags (incluindo a de marcação de títulos) continua indispensável e <strong>muito importante!</strong>
+      </p>
+      <p>
+        Indo do 1 ao 6, as tags <strong>h</strong>algumnúmero servem para indicar a importância (em ordem) do conteúdo da página.
+      </p>
+      <p>
+        Um documento com vários <i>h1</i> ou <i>h2</i> (ou qualquer outro) faz os mesmos perderem a importância para os buscadores.
+      </p>
+    </div>
+
+    <div class="row">
+      <strong>- HTML sem css para deficientes visuais</strong>
+      <p>
+        A questão acima influciencia <strong>demaaaais</strong> a navegação de pessoas com algum tipo de deficiência visual pelo website, pois eles utilizam o teclado (tecla <i>h</i>) para pularem de título em título, do mais relevante para o menos relevante.
+      </p>
+      <p>
+        Mas não são só os títulos que influenciam nesse caso: imagens e títulos sem title, botões fazendo papel de links e vice-versa, texto extenso sem a tag <i>p</i>, entre outros, dificultam demais a usabilidade.
+      </p>
+      <p>
+        Um site bem estruturado é um site que, mesmo sem vínculo com qualquer CSS, continua legível. Já fizeram esse teste?
+      </p>
+      <div class="mind-blowing">
+        <img src="mind-blowing.gif">
+        <h5>XABLAU - AGORA TUDO FAZ SENTIDO!</h5>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h2>CSS</h2>
+    </div>
+
+    <div class="row">
+      <strong>- Estrutura dos atributos CSS</strong>
+      <p>Primeiro posicionamento, depois dimensões, depois 'decorações', etc.. - isso se chama <i>'alfabetizar as propriedades CSS'</i> e tem impacto na performance.</p>
+      <p>Um exemplo de uma classe bem estruturada:</p>
+      <p>
+        <xmp>
+          .meu-bloquinho-feliz {
+               /* posicionamento */
+            position: relative;
+            top: 10px;
+            left: 10px;
+               /* dimensões */
+            display: block;
+            width: 100px;
+            height: 50px;
+               /* embelezamento */
+            background: green;
+            color: yellow;
+               /* outros */
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px black;
+            transition: all 200ms ease-in-out;
+          }
+        </xmp>
+      </p>
+    </div>
+
+    <div class="row">
+      <strong>- Padding e margin - quando usar qual?</strong>
+      <p>Deus sabe que você já tentou criar espaço entre elementos usando um <i>padding</i> maroto, ou usou <i>margin</i> na letra dentro de um botão ou caixa pra aumentar o tamanho dessa caixa. Aiaiai!</p>
+      <p><strong>Back-end-mente</strong> falando, é como você salvar um <i>integer</i> num campo do tipo <i>string</i> e depois usar um <i>to_i</i> pra converter. Funciona? Óbvio! É a forma correta? Diz pra mim.. </p>
+      <p>
+        <img src="margin.png">
+      </p>
+    </div>
+
+    <div class="row">
+      <strong>- Tamanho mínimo de alguns elementos (exemplo: globoesporte LIXO e facebook LINDO)</strong>
+      <p>Quando um conteúdo ainda não foi carregado, o ideal é que seu <i>container</i> tenha um mínimo de tamanho definido (<i>min-height</i> já ajuda), evitando aqueles topos que do nada aparecem e jogam a notícia que você ia clicar lá pra baixo, fazendo você clicar numa propaganda de viagra <strong>SEM QUERER QUERENDO</strong>.</p>
+      <p>Como devia ser:</p>
+      <p><img src="facebook.png" width="500"></p>
+      <p>Como a gente faz: acesse <a href="https://globoesporte.globo.com/">globoesporte.com</a> no celular</p>
+    </div>
+
+    <div class="row">
+      <strong>- Não use propriedades do elemento no seu nome, como 'bigBlueText' ou 'redButton'</strong>
+      <p>Assim como no <i>Back-end</i> você nao usa (ou não deveria usar) variáveis com o nome do valor da mesma (como <i>idade_13_anos: 13 anos</i>), no CSS o mesmo princípio se aplica.</p>
+      <p>Imagina usar uma classe <i>botaoAzulGrande</i> e depois o layout mudar para um botão vermelho pequeno? Que bagunça!</p>
+      <p>O nome da classe tem que ser parcialmente genérico para ser reutilizado (como <i>.actionButton</i> ou <i>.warning</i>), mas não tão genérico a ponto de não se encaixar em todos os casos (como simplesmente <i>.link</i> ou <i>.botao</i>)</p>
+      <p>Existem algumas libs e comunidades que utilizam coisas como o código a seguir, porém acho péssimo para o HTML, e caso o layout mude, você terá que sair caçando arquivo por arquivo que utilizava aquela classe:</p>
+      <p>
+        <xmp>
+          .red {
+            color: red;
+          }
+          .size-400 {
+            width: 400px;
+          }
+          .strong {
+            font-weight: bold;
+          }
+          .line-2 {
+            line-height: 2px;
+          }
+          .radius-10 {
+            border-radius: 10px
+          }
+
+          <div class="red size-400 strong .line-2 radius-10">Sou uma div com 200 classes =D</div>
+        </xmp>
+      </p>
+      <p>(acreditem: se levantei esse tópico é porque já vi isso - mais de uma vez)</p>
+    </div>
+
+    <div class="row">
+      <strong>- Animações leeeeeeeeee...........eeeeeennnntas</strong>
+    </div>
+
+    <div class="row">
+      <p>
+        Dizem que o padrão de animações pra web é algo entre 150ms e 300ms. Acima disso, fica cansativo e com o tempo, somado, irá tomar muito mais tempo dele do que deveria.<br />
+        Esse problema fica mais claro na prática:
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="action1">Animação de 200ms</div>
+      <div class="action2">Animação de 800ms</div>
+    </div>
+
+
+    <div class="row">
+      <h2>JS</h2>
+    </div>
+
+    <div class="row">
+      <strong>- ES6 veio pra te ajudar</strong>
+    </div>
+
+    <div class="row">
+      <p>
+        O ES6 trouxe várias melhorias (assim como toda atualização do JS), e uma delas muito útil é o famigerado <i>arrow function</i>.<br />
+        A questão é: use <strong>um</strong> ou <strong>outro</strong>!
+      </p>
+    </div>
+
+    <div class="row">
+      <p>
+        <xmp>
+          var simples = a => a > 15 ? 15 : a;
+        </xmp>
+      </p>
+    </div>
+
+    <div class="row">
+      <p>
+        <xmp>
+          var complexo = (a) => {
+            if (a > 15) {
+              return a;
+            } else {
+              return 10;
+            }
+          }
+        </xmp>
+      </p>
+    </div>
+
+    <div class="row">
+      <p>
+        Ambos retornarm:
+        <xmp>
+          simples(16); // 15
+          simples(10); // 10
+        </xmp>
+      </p>
+    </div>
+
+    <div class="row">
+      <p>
+        Guia prático do <strong>ES6</strong> e seus métodos: <a href="https://medium.com/@matheusml/o-guia-do-es6-tudo-que-voc%C3%AA-precisa-saber-8c287876325f" target="_blank">clique aqui, brow</a>.
+      </p>
+    </div>
+
+    <div class="row">
+      <strong>- ESLint - porque é importante? - o mais controverso</strong>
+    </div>
+    <div class="row">
+      Para alguem que vai avaliar seu código, é normal a pessoa focar na funcionalidade as vezes e ignorar o lint do código e variáveis declaradas porém nunca usadas, mas...
+    </div>
+    <div class="row space">
+      - Evita o uso de atributos não necessários (como o <i>catch</i> ou <i>success</i> de uma promessa) - você armazena o retorno na memória e nunca o utiliza.. why?<br />
+      <strong>- Legibilidade: padroniza o código para vários devs, evitando uma bagunça</strong><br />
+      - Ler o log do ESLint ajuda (e muito) achar erro de sintaxe, ao invés de checar manualmente no painel de inspeção do navegador<br />
+      - Evita erro de falta (ou excesso) de tabs ou espaços<br />
+      - Ainda que hoje em dia o código seja compilado dependendo do framework, no caso de não ser, em navegadores mais antigos (como o lindo <strong>IE8</strong>) uma vírgula a mais (ou a menos) pode impactar no funcionamento do seu lindo código Javascript.
+    </div>
+    <div class="row">
+    <p>Configurações do <strong>ESLint</strong> que salva vidas:</p>
+    <p>
+      <xmp>
+        Fixing problems:
+        --fix                          Automatically fix problems
+        --fix-dry-run                  Automatically fix problems without saving the changes to the file system
+      </xmp>
+    </p>
+    </div>
+
+    <div class="row">
+      <h2>BÔNUS</h2>
+    </div>
+
+    <div class="row">
+      <strong>- The trick one: qual a principal diferença entre <i>var</i> e <i>let</i>?</strong>
+    </div>
+
+    <div class="row">
+      <p>A diferença principal entre o <i>var</i> e o <i>let</i> é que enquanto o primeiro tem escopo de função, o segundo possui escopo de bloco:</p>
+    </div>
+
+    <div class="row">
+      <p>
+        <script src="https://gist.github.com/matheusml/2c9baa836587304c91b0.js"></script>
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>
